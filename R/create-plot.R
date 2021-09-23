@@ -11,7 +11,7 @@ df = read_csv("data/weatherAUS.csv")
 
 scatter_plot =
   df %>%
-  filter(Location == "Melbourne") %>%
+  filter(Location == "Brisbane") %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) +
   geom_point(colour = "purple") +
   labs(title = "Humidity and Temperature for Brisbane") +
@@ -20,7 +20,7 @@ scatter_plot =
 
 
 # Save the plot in graphics/
-ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
+ggsave(filename = "graphics/scatter-temp-humidity-Melbourne.png", plot = scatter_plot)
 
 time_series =
   df %>%
